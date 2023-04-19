@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CheckMyPosture.com</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+    
+<body>
+    <button class = "goback" onclick="parent.location = 'choice' " tabindex="0"><i class="fa fa-arrow-left" aria-hidden="true"></i><h4>Go Back</h4></button>
+    
+    <div class="center" id = "pose">
+        <img src="{{ url_for('video_feed') }}" id = "pose_img">
+    </div> 
+
+    <div id="services">
+        <div class="box1" onclick="parent.location = 'index' " tabindex="0">
+            <h6 class="h-tertiary center">Return to Home Page</h6>
+            <p class="center"></p>
+        </div>
+    </div>
+    <div>{{ text }}</div>
+    <footer>
+        <div class="center">
+            Copyright &copy; All rights reserved!
+        </div>
+    </footer>
+  
+</body>
+
+</html>

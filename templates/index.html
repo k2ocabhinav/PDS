@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CheckMyPosture.com</title>
+   
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/style.css') }}">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="{{url_for('static', filename='logo.jpg')}}" alt="CheckMyPosture.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#client-section">About Us</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to CheckMyPosture!</h1>
+        <p>Worried about your incorrect body posture? </p>
+        <p>Don't worry,we got you! </p>
+       
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box" onclick="parent.open('choice')" tabindex="0">
+                <h2 class="h-secondary center">Check Your Posture</h2>
+            </div>
+        </div>
+        <!-- <div class="mx-auto" style="width: 700px;">
+            <img src="{{ url_for('video_feed') }}" align="middle"/>
+          </div>  -->
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">About Us</h1>
+        <div id="clients">
+             <div class="box">
+               
+               
+                <p class="center">The main aim of our project is to work towards enhancement of user’s experience by improving the lifestyle of people who have to sit in front of systems for prolonged hours which can in turn be the root cause of various alarming problems like back pain, spinal dysfunction, joint degeneration, rounded shoulders.
+
+ We have thus implemented a system using a post estimation model based on computer vision, that will monitor the sitting posture of the user continuously via a live video feed. 
+
+At any point of time if the posture of the neck, shoulders or arms is inappropriate in a way that it can cause physical tension to the user, the user will get notified about the same.
+
+This will thus help the user to maintain a good posture and improve their lifestyle.
+ 
+This project was motivated by a desire to help office workers change their sedentary behavior because a prolonged sedentary posture increases the risks of developing musculoskeletal injuries and chronic diseases, thus threatening their physical and psychological well-being.</p>
+            </div>
+           
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form id="form" method="post">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="phone" id="phone" placeholder="Enter your phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                </div>
+                <button class="btn2" type ="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; All rights reserved!
+        </div>
+    </footer>
+    
+</body>
+
+</html>
